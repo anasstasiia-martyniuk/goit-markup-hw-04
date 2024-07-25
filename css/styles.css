@@ -38,15 +38,33 @@ section {
     justify-content: center;
     flex-direction: row;
     gap: 24px;
-    fill: #4d5ae5;
 }
-.icon:hover {
-    fill: #404bbf;
+.icon {
+    width: 40px;
+    height: 40px;
+}
+.icon a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+}
+.icon a:hover,
+.icon a:focus {
+    background-color: #404bbf;
+}
+.icon-svg {
+    fill:#f4f4fd;
 }
 
 /*#region Header */
 .menu{
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
 }
 header .container {
     display: flex;
@@ -130,8 +148,11 @@ header .container {
             rgba(46, 47, 66, 0.7)
             ), 
             url('../images/people-office.jpg');
-    background-size: 1440px;
     padding: 188px 0;
+    max-width: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
 }
 .order-service-title {
@@ -193,9 +214,15 @@ header .container {
    flex-direction: column;
 }
 .advantages-icons {
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4fd;
     border: 1px solid #8e8f99;
     border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
 }
 .advantages-titles {
     font-weight: 500;
@@ -341,13 +368,22 @@ header .container {
 .page-footer .container {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
 }
-.page-footer-text, .social-media-text{
+.page-footer-text{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    max-width: 264px;
+}
+.social-media-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
     max-width: 264px;
 }
 .footer-information {
@@ -356,17 +392,19 @@ header .container {
 .social-media-text{
     margin-bottom: 16px;
 }
-.footer-icon{
-    fill: #4d5ae5;
-}
-.footer-icon:hover {
-    fill: #31d0aa;
-}
-.footer-social-media{
+.footer-list{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
     gap: 16px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+}
+.page-footer .icon a:hover, 
+.page-footer .icon a:focus {
+    background-color: #31d0aa;
 }
 /* #endregion Footer */
